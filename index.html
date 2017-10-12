@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="lib/angular.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/controller.js"></script>
+  </head>
+  <body ng-app="Angular_Learning">
+  	<div>
+	    <p>This is your first angular expression {{10 + 5}}</p>
+
+	    Enter your name: <input type="text" ng-model="name">
+	    <p ng-show="name">Hello {{name}}!</p>
+	    <p>Hey Welcome <strong><span ng-bind="name"></span></strong></p>
+	</div>
+  	<div ng-controller="secondController">
+  		<p>Hello</p>
+  	</div>
+  </body>
+</html>
