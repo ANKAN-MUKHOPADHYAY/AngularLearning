@@ -1,0 +1,1 @@
+angular.module('Quiz_angular', ['Quiz_angular.controllers'])

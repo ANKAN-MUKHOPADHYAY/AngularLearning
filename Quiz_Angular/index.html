@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="lib/angular.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/controller.js"></script>
+    <style>
+		.card {
+		     background: #ddd;
+		     border-radius: 5px;
+		     padding: 18px 20px 18px 20px;
+		     margin: auto;
+		     width: 30%;
+		     box-shadow: -1px 0px 10px rgba(0, 0, 0, 0.12);
+		     height: 300px;
+		 }
+		 @media only screen and (max-width: 500px){
+		    .card {
+		        background: #ddd;
+		        border-radius: 5px;
+		        padding: 50px 50px 50px 50px;
+		        margin: auto;
+		        width: 80%;
+		        box-shadow: -1px 0px 10px rgba(0, 0, 0, 0.12);
+		        height: 500px;
+		        font-size: 25px;
+		    }
+		    .form-control {
+		     
+		        height: 56px;
+		    }
+		    .btn {
+		        padding: 12px 12px;
+		        font-size: 24px;
+		        margin: 20px;
+		    }
+		}
+		.title {
+		 
+		    text-align: center;
+		}
+		.btn{
+		    float: right;
+		}
+		body{
+		    margin: 10% auto;
+		}
+	</style>
+
+</head>
+
+<body ng-app="Quiz_angular">
+    <div class="container" ng-controller="loginController">
+        <div class="card">
+            <h1 class="title">Register</h1>
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" ng-model="loginData.username" id="User" class="form-control" required="required" />
+
+            </div>
+            <div class="form-group">
+                <label>Mobile</label>
+                <input type="number" ng-model="loginData.mobile" id="number" class="form-control" maxlength="10" required="required" />
+
+            </div>
+            <div class="form-group" ng-show="loginData.username && loginData.mobile">
+                <button ng-click="loginOps(loginData)" class="btn btn-success">Let's GO &nbsp;<span class="glyphicon glyphicon-log-in"></span> </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
