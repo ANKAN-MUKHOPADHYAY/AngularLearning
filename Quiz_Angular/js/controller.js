@@ -4,3 +4,8 @@ angular.module('Quiz_angular.controllers', [])
 		console.log(req);
 	};
 })
+.controller('signupController', function($scope){
+	$scope.signUpOps = function(req){
+		console.log(req);
+	};
+})

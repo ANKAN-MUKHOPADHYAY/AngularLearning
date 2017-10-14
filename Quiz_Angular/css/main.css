@@ -1,0 +1,40 @@
+.card {
+	background: #ddd;
+	border-radius: 5px;
+	padding: 18px 20px 18px 20px;
+	margin: auto;
+	width: 30%;
+	box-shadow: -1px 0px 10px rgba(0, 0, 0, 0.12);
+	height: 300px;
+}
+@media only screen and (max-width: 500px){
+	.card {
+		background: #ddd;
+		border-radius: 5px;
+		padding: 50px 50px 50px 50px;
+		margin: auto;
+		width: 80%;
+		box-shadow: -1px 0px 10px rgba(0, 0, 0, 0.12);
+		height: 500px;
+		font-size: 25px;
+	}
+	.form-control {
+		
+		height: 56px;
+	}
+	.btn {
+		padding: 12px 12px;
+		font-size: 24px;
+		margin: 20px;
+	}
+}
+.title {
+	
+	text-align: center;
+}
+.btn{
+	float: right;
+}
+body{
+	margin: 10% auto;
+}

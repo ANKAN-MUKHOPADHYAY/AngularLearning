@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="card">
+        <h1 class="title">Register</h1>
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text" ng-model="loginData.username" id="User" class="form-control" required="required" />
+
+        </div>
+        <div class="form-group">
+            <label>Mobile</label>
+            <input type="number" ng-model="loginData.mobile" id="number" class="form-control" maxlength="10" required="required" />
+
+        </div>
+        <div class="form-group" ng-show="loginData.username && loginData.mobile">
+            <button ng-click="loginOps(loginData)" class="btn btn-success">Let's GO &nbsp;<span class="glyphicon glyphicon-log-in"></span> </button>
+        </div>
+
+        <p>New Member? <a ui-sref="usersignup">Sign Up Here</a></p>
+    </div>
+</div>
