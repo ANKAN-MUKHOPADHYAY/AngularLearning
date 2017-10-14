@@ -9,10 +9,4 @@ angular.module('Quiz_angular', ['ui.router','Quiz_angular.controllers'])
 			templateUrl : 'pages/login.html',
 			controller : 'loginController'
 		})
-		.state('usersignup',{
-			url: '/signup',
-			templateUrl : 'pages/signUp.html',
-			controller : 'signupController'
-		})
-
 });
