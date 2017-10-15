@@ -1,23 +1,38 @@
-<div class="container">
-    <div class="card" style="height:340px;padding: 5px 20px 18px 20px;">
-        <h1 class="title">Sign Up</h1>
-        <div class="form-group">
-            <label>Full Name</label>
-            <input type="text" ng-model="signUpData.name" id="User" class="form-control" required="required" />
-
-        </div>
-        <div class="form-group">
-            <label>Email Id</label>
-            <input type="email" ng-model="signUpData.email" class="form-control" maxlength="10" required="required" />
-
-        </div>
-        <div class="form-group">
-            <label>DoB</label>
-            <input type="date" ng-model="signUpData.dob" id="number" class="form-control" maxlength="10" required="required" />
-
-        </div>
-        <div class="form-group" ng-show="signUpData.name && signUpData.email">
-            <button ng-click="signUpOps(signUpData)" class="btn btn-success">Let's Submit &nbsp;<span class="glyphicon glyphicon-log-in"></span> </button>
-        </div>
+<form name="login" novalidate>  
+  <div ng-form="loginform">
+    <p>
+    User Name : 
+    <input type="text" name="userName" ng-model="userName" placeholder="User Name" required/>  
+    <div ng-show="loginform.userName.$dirty && loginform.userName.$invalid">  
+      <span class="error" ng-show="loginform.userName.$error.required">
+      User name is required.
+      </span>  
+    </div>  
+    </p>
+  <p>Email : 
+    <input type="email" name="email" ng-model="email" placeholder="Email ID" required/>  
+    <div ng-show="loginform.email.$dirty && loginform.email.$invalid">  
+      <span class="error" ng-show="loginform.email.$error.required">
+      Email is required.
+      </span>
+      <span class="error" ng-show="loginform.email.$error.email">  
+      Enter a valid email.
+      </span>  
     </div>
-</div>
+  </p>
+
+  <p>Password : 
+    <input type="password" name="pass" ng-model="password" placeholder="Password" required/>  
+    <div ng-show="loginform.pass.$dirty && loginform.pass.$invalid">  
+      <span class="error" ng-show="loginform.pass.$error.required">
+      Password is required.
+      </span>  
+    </div>
+  </p>
+  </div>  
+  <button type="submit" ng-disabled="(login.loginform.userName.$dirty 
+  && login.loginform.userName.$invalid)  
+  || (login.loginform.email.$dirty && login.loginform.email.$invalid) 
+  || login.loginform.pass.$dirty 
+  && login.loginform.pass.$invalid">Submit Form</button>  
+</form>   
