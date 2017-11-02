@@ -1,9 +1,18 @@
 angular.module('Quiz_angular.controllers', [])
-.controller('loginController', function($scope,$state){
+.controller('loginController', function($scope,$state,userOperations){
 	$scope.loginDisplay = true;
 	$scope.loginOps = function(req){
 		console.log(req);
-		$state.go('homepath');
+		userOperations.register(req).success(function(wow){
+			if(wow.success){
+				sessionStorage.setItem('UserID',wow.Users.UID);
+				sessionStorage.setItem('UserName',wow.Users.exam_register_uname);
+				$state.go('homepath');
+			}
+			console.log(wow);
+		},function(err){
+			console.log(err);
+		})
 	};
 	$scope.changeForm = function(a,b){
 		$scope.loginDisplay = a;

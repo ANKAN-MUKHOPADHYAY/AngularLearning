@@ -1,4 +1,4 @@
-angular.module('Quiz_angular', ['ui.router','Quiz_angular.controllers'])
+angular.module('Quiz_angular', ['ui.router','Quiz_angular.controllers','Quiz_angular.services'])
 .config(function($stateProvider, $urlRouterProvider){
 	$urlRouterProvider.otherwise('login');	
 		
