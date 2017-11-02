@@ -19,4 +19,9 @@ angular.module('Quiz_angular', ['ui.router','Quiz_angular.controllers'])
 			templateUrl : 'pages/inbuild.html',
 			controller : 'signupController'
 		})
+		.state('homepath',{
+			url: '/home',
+			templateUrl : 'pages/home.html',
+			controller : 'homeController'
+		})
 });
